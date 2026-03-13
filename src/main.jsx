@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { useState, useEffect, useCallback, useRef } from "react";
 import * as XLSX from "xlsx";
 
