@@ -292,7 +292,7 @@ export default function MedPulse() {
     setLoading(true); setError(""); setArticles([]); setProgress(10); setStatus("正在连接检索引擎…");
     try {
       setProgress(28); setStatus("正在检索顶级期刊最新文献…");
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await fetch("/api/chat", {
         method:"POST", headers:{"Content-Type":"application/json"},
         body: JSON.stringify({ model:"claude-sonnet-4-20250514", max_tokens:4000,
           tools:[{type:"web_search_20250305",name:"web_search"}],
